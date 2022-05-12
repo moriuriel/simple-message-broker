@@ -3,8 +3,19 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "kafka:producer": "ts-node-dev --respawn --transpile-only ./src/kafka/producer.ts",
+    "kafka:consumer": "ts-node-dev --respawn --transpile-only ./src/kafka/consumer.ts"
+  },
   "dependencies": {
+    "chalk": "^5.0.1",
     "kafkajs": "^1.15.0",
     "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.32",
+    "@types/uuid": "^8.3.4",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.6.4"
   }
 }
