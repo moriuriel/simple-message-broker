@@ -5,14 +5,18 @@
   "license": "MIT",
   "scripts": {
     "kafka:producer": "ts-node-dev --respawn --transpile-only ./src/kafka/producer.ts",
-    "kafka:consumer": "ts-node-dev --respawn --transpile-only ./src/kafka/consumer.ts"
+    "kafka:consumer": "ts-node-dev --respawn --transpile-only ./src/kafka/consumer.ts",
+    "amqp:producer": "ts-node-dev --respawn --transpile-only ./src/rabbitmq/producer.ts",
+    "amqp:consumer": "ts-node-dev --respawn --transpile-only ./src/rabbitmq/consumer.ts"
   },
   "dependencies": {
+    "amqplib": "^0.9.0",
     "chalk": "^5.0.1",
     "kafkajs": "^1.15.0",
     "uuid": "^8.3.2"
   },
   "devDependencies": {
+    "@types/amqplib": "^0.8.2",
     "@types/node": "^17.0.32",
     "@types/uuid": "^8.3.4",
     "ts-node-dev": "^1.1.8",

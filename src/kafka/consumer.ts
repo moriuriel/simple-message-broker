@@ -21,6 +21,12 @@ async function main() {
           const prefix = `${topic} - ${message.timestamp}`;
 
           console.log(`- ${prefix} ${message.value}`);
+
+          const order = message.value?.toString();
+
+          if (order) {
+            console.log(JSON.parse(order));
+          }
         }
       },
     });
